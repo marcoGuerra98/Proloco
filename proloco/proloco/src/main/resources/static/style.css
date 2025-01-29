@@ -9,10 +9,6 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonne */
-    gap: 15px; /* Spazio tra i campi */
-    max-width: 800px; /* Larghezza massima del form */
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
