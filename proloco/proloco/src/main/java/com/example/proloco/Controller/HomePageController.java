@@ -8,6 +8,6 @@ public class HomePageController {
 
     @GetMapping("/")
     public String redirectToProloco() {
-        return "redirect:/Boffalorese.html";
+        return "redirect:/proloco.html";
     }
 }
