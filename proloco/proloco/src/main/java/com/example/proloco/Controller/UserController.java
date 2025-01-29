@@ -4,6 +4,7 @@ import ch.qos.logback.classic.Logger;
 import com.example.proloco.Model.User;
 import com.example.proloco.Service.UserService;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.io.IOException;
 @RestController
 public class UserController {
 
+    private static final Logger log = (Logger) LoggerFactory.getLogger(UserController.class);
     private UserService userService;
 
     @Autowired
@@ -38,7 +40,6 @@ public class UserController {
         try {
             userService.insertUserIntoDB(user);
         } catch (IOException | InvalidFormatException e) {
-            Logger log = null;
             log.error("Error adding users to DB", e);
             throw new RuntimeException(e);
         }

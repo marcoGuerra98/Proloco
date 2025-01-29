@@ -200,6 +200,7 @@ public class UserService {
         }
     }
 
+    // TODO: MARCO SEI PROPRIO UN COGLIONE, MODIFICA STO METODO E AGGIUNGI I NUOVI CAMPI
     public String[] tranformUserIntoStringArray(User user, int id) {
         String[] arrayString = new String[9];
 
