@@ -19,7 +19,7 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
     const user = {
         anagrafica: anagrafica,
         email: document.getElementById('email').value,
-        numeroCellulare: document.getElementById('numeroCellulare').value
+        numeroCellulare: document.getElementById('numeroCellulare').value,
         statoIscrizione: document.getElementById('statoIscrizione').value
     }
 
