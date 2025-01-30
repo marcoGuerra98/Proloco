@@ -202,7 +202,7 @@ public class UserService {
 
     // TODO: MARCO SEI PROPRIO UN COGLIONE, MODIFICA STO METODO E AGGIUNGI I NUOVI CAMPI
     public String[] tranformUserIntoStringArray(User user, int id) {
-        String[] arrayString = new String[9];
+        String[] arrayString = new String[20];
 
         if (user != null) {
             Anagrafica anagrafica = user.getAnagrafica();
@@ -219,34 +219,74 @@ public class UserService {
                 arrayString[DUE] = cognome;
             }
 
+            String sesso = anagrafica.getSesso();
+            if (sesso != null) {
+                arrayString[TRE] = sesso;
+            }
+
+            String caricaSociale = anagrafica.getCaricaSociale();
+            if (caricaSociale != null) {
+                arrayString[QUATTRO] = caricaSociale;
+            }
+
+            String dataIscrizione = anagrafica.getDataIscrizione();
+            if (dataIscrizione != null) {
+                arrayString[CINQUE] = dataIscrizione;
+            }
+
             String codFiscale = anagrafica.getCodiceFiscale();
             if (codFiscale != null) {
-                arrayString[TRE] = codFiscale;
+                arrayString[SEI] = codFiscale;
             }
 
             String data = anagrafica.getDataNascita();
             if (data != null) {
-                arrayString[QUATTRO] = data;
+                arrayString[SETTE] = data;
+            }
+
+            String comuneNascita = anagrafica.getComuneNascita();
+            if (comuneNascita != null) {
+                arrayString[OTTO] = comuneNascita;
+            }
+
+            String statoEsteroNascita = anagrafica.getStatoEsteroNascita();
+            if (statoEsteroNascita != null) {
+                arrayString[NOVE] = statoEsteroNascita;
+            }
+
+            String comuneEsteroNascita = anagrafica.getComuneEsteroNascita();
+            if (comuneEsteroNascita != null) {
+                arrayString[DIECI] = comuneEsteroNascita;
+            }
+
+            String comune = anagrafica.getComune();
+            if (comune != null) {
+                arrayString[UNDICI] = comune;
             }
 
             String indirizzo = anagrafica.getIndirizzo();
             if (indirizzo != null) {
-                arrayString[CINQUE] = indirizzo;
+                arrayString[DODICI] = indirizzo;
             }
 
-            /*
-            int numerCivico = anagrafica.getNumeroCivico();
-            arrayString[SEI] = String.valueOf(numerCivico);*/
-
+            String cap = anagrafica.getCap();
+            if (cap != null) {
+                arrayString[TREDICI] = cap;
+            }
 
             String email = user.getEmail();
             if (email != null) {
-                arrayString[SETTE] = email;
+                arrayString[QUATTORDICI] = email;
             }
 
             String cell = user.getNumeroCellulare();
             if (cell != null) {
-                arrayString[OTTO] = cell;
+                arrayString[QUINDICI] = cell;
+            }
+
+            String statoIscrizione = user.getStatoIscrizione();
+            if (statoIscrizione != null) {
+                arrayString[SEDICI] = statoIscrizione;
             }
         }
 
